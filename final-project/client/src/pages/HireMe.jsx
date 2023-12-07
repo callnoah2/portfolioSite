@@ -3,7 +3,7 @@ import React from 'react';
 const HireMe = () => {
   return (
     <div>
-      {/* About page content */}
+      {"HIRE ME"}
     </div>
   );
 };
