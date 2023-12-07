@@ -9,6 +9,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "./src/main.jsx",
+        about: "./src/pages/About.jsx",
+        HireMe: "./src/pages/HireMe.jsx",
+        Projects:"./src/pages/Status.jsx",
       },
     },
     outDir: "../_server/core/static/core"

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ view.title|default:"Portfolio" }}</title>
+  {% extends 'core/index.html' %}
+  <title>Portfolio</title>
   {% if debug %}
     <script type="module">
       import RefreshRuntime from '{{asset_url}}/static/@react-refresh'
@@ -13,15 +14,18 @@
       window.__vite_plugin_react_preamble_installed__ = true
     </script>
     <script type="module" src="{{asset_url}}/static/@vite/client"></script>
-    <script type="module" src="{{asset_url}}/static/src/main.jsx"></script>
+    <script type="module" src="{{asset_url}}/static/src/pages/About.jsx"></script>
   {% else %}
     <link rel="stylesheet" href="/static/{{css_file}}" />
     <script type="module" src="/static/{{js_file}}"></script>
   {% endif %}
 </head>
 <body>
-  <div id="root">
-    {% block content %}{% endblock %}
+  <div id="root">    
+    {% block content %}
+        <script type="module" src="{{asset_url}}/static/@vite/client"></script>
+        <script type="module" src="{{asset_url}}/static/src/pages/About.jsx"></script>
+    {% endblock %}
   </div>
 </body>
 </html>

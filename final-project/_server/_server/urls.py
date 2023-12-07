@@ -23,10 +23,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('registration/', include("registration.urls")),
     path('', include("core.urls")),
-    # Remove the conflicting path('')
-]
-
-# Catch-all route for frontend
-urlpatterns += [
-    re_path(r'^(?!admin/|registration/|static/).*', TemplateView.as_view(template_name='index.html')),
 ]

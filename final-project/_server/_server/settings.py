@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from dotenv import load_dotenv
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -62,7 +61,7 @@ ROOT_URLCONF = '_server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'core/templates/core')],
+        'DIRS': [BASE_DIR / 'core' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # DONT USE THE STATIC URL WHEN IN DEBUG MODE
-STATIC_URL = '/static/core/' if not DEBUG else "__UNUSED__/"
+STATIC_URL = 'static/' if not DEBUG else "__UNUSED__/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -132,7 +131,3 @@ STATIC_URL = '/static/core/' if not DEBUG else "__UNUSED__/"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = "registration/sign_in/"
-
-STATICFILES_DIRS = [
-    BASE_DIR / 'client/public',
-]
