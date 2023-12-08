@@ -21,7 +21,7 @@ const Drawer = ({ isOpen, onClose, darkModeToggle }) => {
         < a href="/">Home</a>
         <a href="/about">About Me</a>
         <a href="/projects">Projects</a>
-        <a href="/hire-me">Hire Me</a>
+        <a href="/hireme">Hire Me</a>
         <a href="/status">Status</a>
         <button onClick={darkModeToggle}>Toggle Dark Mode</button>
       </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Drawer from './Drawer';
 import '../styles/DarkLight.css'
+import '../index.css'
 
 const IndexPage = () => {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -25,9 +26,8 @@ const IndexPage = () => {
       <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} darkModeToggle={toggleDarkMode} />
 
       <div className="content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is a brief introduction of what this project is - a personal portfolio.</p>
-        {/* Add more content as needed */}
+        <h1>Noah Call Portfolio</h1>
+        <p>Welcome to my personal portfolio! I'm Noah Call, a passionate web developer and cybersecurity enthusiast. This project serves as a showcase of my skills and projects. If you're looking for a passionate and skilled professional, I'm ready to bring my expertise to your team. Explore my portfolio to learn more about my experiences and capabilities, and let's connect to discuss how I can contribute to your projects.</p>
       </div>
     </div>
   );

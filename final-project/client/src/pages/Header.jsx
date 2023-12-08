@@ -9,8 +9,8 @@ const Header = ({ isDrawerOpen, toggleDrawer }) => {
         <IoMdClose
           onClick={toggleDrawer}
           className="material-icons"
-          tabIndex={0} // Add tabIndex to make it focusable
-          role="button" // Add role to indicate it's a button
+          tabIndex={0}
+          role="button"
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               toggleDrawer();
@@ -21,8 +21,8 @@ const Header = ({ isDrawerOpen, toggleDrawer }) => {
         <IoMdMenu
           onClick={toggleDrawer}
           className="material-icons"
-          tabIndex={0} // Add tabIndex to make it focusable
-          role="button" // Add role to indicate it's a button
+          tabIndex={0} 
+          role="button"
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               toggleDrawer();
@@ -30,7 +30,7 @@ const Header = ({ isDrawerOpen, toggleDrawer }) => {
           }}
         />
       )}
-      <span className="example-title">TBD</span>
+      <span className="example-title">Noah Call Portfolio</span>
     </div>
   );
 };
