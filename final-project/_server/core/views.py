@@ -1,6 +1,7 @@
 # Load manifest when the server launches
 from django.shortcuts import render
 from django.conf import settings
+from django.http import HttpResponse
 import json
 import os
 from django.contrib.auth.decorators import login_required
@@ -56,34 +57,25 @@ def projects(req):
     return render(req, "core/projects.html", context)
 
 def project1(req):
+    template_path = os.path.join("projects", "Quotes", "quotes.html")
     context = {
         "asset_url": os.environ.get("ASSET_URL", ""),
         "debug": settings.DEBUG,
         "manifest": MANIFEST,
-        "js_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Quotes/quotes.html"]["file"],
-        "css_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Quotes/quotes.html"]["css"][0]
+        "js_file": "" if settings.DEBUG else MANIFEST["static/projects/Quotes/quotes.js"]["file"],
+        "css_file": "" if settings.DEBUG else MANIFEST["static/projects/Quotes/quotes.css"]["css"][0]
     }
-    return render(req, "core/project1.html", context)
+    return render(req, template_path, context)
 
 def project2(req):
-    context = {
-        "asset_url": os.environ.get("ASSET_URL", ""),
-        "debug": settings.DEBUG,
-        "manifest": MANIFEST,
-        "js_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/CompLib/index.html"]["file"],
-        "css_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/CompLib/index.html"]["css"][0]
-    }
-    return render(req, "core/project2.html", context)
+    with open('static/projects/CompLib/index.html', 'r') as file:
+        content = file.read()
+    return HttpResponse(content)
 
 def project3(req):
-    context = {
-        "asset_url": os.environ.get("ASSET_URL", ""),
-        "debug": settings.DEBUG,
-        "manifest": MANIFEST,
-        "js_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Recipe/index.html"]["file"],
-        "css_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Recipe/index.html"]["css"][0]
-    }
-    return render(req, "core/project3.html", context)
+    with open('static/projects/Recipe/index.html', 'r') as file:
+        content = file.read()
+    return HttpResponse(content)
 
 @login_required
 def status(req):

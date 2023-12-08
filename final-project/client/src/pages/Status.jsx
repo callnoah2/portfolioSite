@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Drawer from './Drawer';
 import '../styles/DarkLight.css'
+import '../index.css'
 
 const Status = () => {
   const [isDarkMode, setDarkMode] = useState(false);
