@@ -1,0 +1,64 @@
+.drawer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+  }
+  
+  .drawer a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .drawer a:hover {
+    color: #f1f1f1;
+  }
+  
+  .drawer .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .drawer-example {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .drawer-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .drawer-content .material-icons {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .drawer-title {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .sub-header-content {
+    background-color: #34495e;
+    padding: 10px;
+    margin-bottom: 20px;
+  }

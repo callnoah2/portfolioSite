@@ -56,26 +56,14 @@ def projects(req):
     }
     return render(req, "core/projects.html", context)
 
-def project1(req):
-    template_path = os.path.join("projects", "Quotes", "quotes.html")
-    context = {
-        "asset_url": os.environ.get("ASSET_URL", ""),
-        "debug": settings.DEBUG,
-        "manifest": MANIFEST,
-        "js_file": "" if settings.DEBUG else MANIFEST["static/projects/Quotes/quotes.js"]["file"],
-        "css_file": "" if settings.DEBUG else MANIFEST["static/projects/Quotes/quotes.css"]["css"][0]
-    }
-    return render(req, template_path, context)
+def quotes(req):
+    return render(req, "core/projects/Quotes/quotes.html")
 
-def project2(req):
-    with open('static/projects/CompLib/index.html', 'r') as file:
-        content = file.read()
-    return HttpResponse(content)
+def compLib(req):
+    return render(req, 'core/projects/CompLib/index.html')
 
-def project3(req):
-    with open('static/projects/Recipe/index.html', 'r') as file:
-        content = file.read()
-    return HttpResponse(content)
+def recipeCards(req):
+    return render(req, "core/projects/Recipe/index.html")
 
 @login_required
 def status(req):

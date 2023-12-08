@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Card Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Card Editor</h1>
+        <div class="editor">
+            <div class="input-section">
+                <label for="titleInput">Recipe Title: </label>
+                <input type="text" id="titleInput" tabindex="1" autofocus>
+                <button id="saveTitleBtn" onclick="updateTitle()" tabindex="2">Save Title</button> 
+                <br><br>
+                <label for="ingredientInput">Add Ingredient: </label>
+                <input type="text" id="ingredientInput" tabindex="3">
+                <button id="addIngredientBtn" onclick="addIngredient()" tabindex="4">Add</button>
+                <br><br>
+                <label for="instructionInput">Add Instruction: </label>
+                <input type="text" id="instructionInput" tabindex="5">
+                <button id="addInstructionBtn" onclick="addInstruction()" tabindex="6">Add</button>
+            </div>
+            <div class="recipe-title">
+                <h2 id="recipeTitle"></h2>
+            </div>
+            <div class="recipe-section">
+                <div class="ingredients-section">
+                    <h2>Ingredients</h2>
+                    <ul id="ingredientsList" tabindex="7">
+                    </ul>
+                </div>
+                <div class="instructions-section">
+                    <h2>Instructions</h2>
+                    <ol id="instructionsList" tabindex="8">
+                    </ol>
+                </div>
+            </div>
+            <div class="export-section">
+                <button id="exportRecipeBtn" onclick="exportRecipe()" tabindex="9">Export Recipe</button>
+                <button onclick="resetFields()" tabindex="10">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="writeRecipeToFile.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

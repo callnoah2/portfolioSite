@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpinUp Library</title>
+    <link rel="stylesheet" href="Styles.css" defer>
+    <link rel="stylesheet" href="components/Navbar.css" defer>
+    <link rel="stylesheet" href="components/NavDrawer.css" defer>
+    <link rel="stylesheet" href="components/Button.css" defer>
+    <link rel="stylesheet" href="components/fab.css" defer>
+    <link rel="stylesheet" href="components/img.css" defer>
+    <link rel="stylesheet" href="components/spinners.css" defer>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" defer>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- SpinUp CSS Library Title -->
+      <div class="title">SpinUp CSS Library</div>
+
+      <!-- Navbar Documentation -->
+      <div class="navbar-docs">
+
+        <!-- Navbar Title -->
+        <div class="sub-header">
+          <h2>Navbar</h2>
+        </div>
+
+        <!-- Navbar Example -->
+        <div class="example-box">
+          <div class="example-content">
+            <span class="material-icons">menu_open</span>
+            <span class="example-title">Your Title Here</span>
+          </div>
+          <div class="links">
+            <a href="ExtraDocs/home.html">Home</a>
+            <a href="ExtraDocs/about.html">About</a>
+            <a href="ExtraDocs/services.html">Services</a>
+            <a href="ExtraDocs/contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- HTML Section -->
+        <div class="code-section">
+          <h3>HTML</h3>
+          <pre class="html" id="navbar-html"></pre>
+        </div>
+
+        <!-- CSS Section -->
+        <div class="code-section">
+          <h3>CSS</h3>
+          <pre class="css" id="navbar-css"></pre>
+        </div>
+
+        <!-- JS Section -->
+        <div class="code-section">
+          <h3>JS</h3>
+          <pre class="js" id="navbar-js"></pre>
+        </div>
+      </div>
+
+      <!-- Navbar Component -->
+      <div class="navbar-container" id="navbar-container"></div>
+
+      <!-- Navigation Drawer Documentation -->
+      <div class="drawer-docs">
+
+        <!-- Drawer Title -->
+        <div class="sub-header">
+          <h2>Navigation Drawer</h2>
+        </div>
+
+        <!-- Drawer Example -->
+        <div class="drawer-example">
+          <div class="drawer-content">
+            <span class="material-icons" onclick="openDrawer()">menu_open</span>
+            <span class="drawer-title">Your Title Here</span>
+          </div>
+        </div>
+
+        <!-- HTML Section -->
+        <div class="code-section">
+          <h3>HTML</h3>
+          <pre class="html" id="NavDrawer-html"></pre>
+        </div>
+
+        <!-- CSS Section -->
+        <div class="code-section">
+          <h3>CSS</h3>
+          <pre class="css" id="drawer-css"></pre>
+        </div>
+
+        <!-- JS Section -->
+        <div class="code-section">
+          <h3>JS</h3>
+          <pre class="js" id="drawer-js"></pre>
+        </div>
+      </div>
+
+      <!-- Navigation Drawer Component -->
+      <div class="drawer-container" id="drawer-container"></div>
+
+
+      <!-- Button Documentation -->
+    <div class="button-docs">
+
+      <!-- Button Title -->
+      <div class="sub-header">
+        <h2>Button</h2>
+      </div>
+
+      <!-- Button Example -->
+      <div class="button-example">
+        <button class="spinup-button" onclick="handleButtonClick()">
+          <span class="material-icons">add</span>
+          <span class="button-title">Click Me</span>
+          <span class="button-count" id="button-count">0</span>
+        </button>
+      </div>
+
+      <!-- HTML Section -->
+      <div class="code-section">
+        <h3>HTML</h3>
+        <pre class="html" id="button-html"></pre>
+      </div>
+
+      <!-- CSS Section -->
+      <div class="code-section">
+        <h3>CSS</h3>
+        <pre class="css" id="button-css"></pre>
+      </div>
+
+      <!-- JS Section -->
+      <div class="code-section">
+        <h3>JS</h3>
+        <pre class="js" id="button-js"></pre>
+      </div>
+    </div>
+
+    <!-- Button Component -->
+    <div class="button-container" id="button-container"></div>
+
+    <!-- FAB Documentation -->
+    <div class="fab-docs">
+
+      <!-- FAB Title -->
+      <div class="sub-header">
+        <h2>Floating Action Button</h2>
+      </div>
+
+      <!-- FAB Example -->
+      <div class="fab-example">
+        <a href="ExtraDocs/button.html" class="fab-button">
+          <span class="material-icons">add</span>
+        </a>
+      </div>
+
+      <!-- HTML Section -->
+      <div class="code-section">
+        <h3>HTML</h3>
+        <pre class="html" id="fab-html"></pre>
+      </div>
+
+      <!-- CSS Section -->
+      <div class="code-section">
+        <h3>CSS</h3>
+        <pre class="css" id="fab-css"></pre>
+      </div>
+
+      <!-- JS Section -->
+      <div class="code-section">
+        <h3>JS</h3>
+        <pre class="js" id="fab-js"></pre>
+      </div>
+    </div>
+
+    <!-- FAB Component -->
+    <div class="fab-container" id="fab-container"></div>
+
+    <!-- Image Carousel Documentation -->
+    <div class="carousel-docs">
+
+    <!-- Carousel Title -->
+    <div class="sub-header">
+      <h2>Image Carousel</h2>
+    </div>
+
+    <!-- Carousel Example -->
+    <div class="carousel-example">
+      <div class="carousel-container" id="carousel-container"></div>
+    </div>
+
+    <!-- HTML Section -->
+    <div class="code-section">
+      <h3>HTML</h3>
+      <pre class="html" id="carousel-html"></pre>
+    </div>
+
+    <!-- CSS Section -->
+    <div class="code-section">
+      <h3>CSS</h3>
+      <pre class="css" id="carousel-css"></pre>
+    </div>
+
+    <!-- JS Section -->
+    <div class="code-section">
+      <h3>JS</h3>
+      <pre class="js" id="carousel-js"></pre>
+    </div>
+  </div>
+
+    <!-- Image Carousel Component -->
+    <div class="carousel-container" id="carousel-container"></div>
+
+   <!-- Spinner Title-->
+   <div class="sub-header">
+    <h2>Loading Spinners</h2>
+  </div>
+
+    <!-- Spinner Examples -->
+    <div class="spinner-example">
+      <div class="spinner-container" id="text-spinner-container"></div> <!--Animated Text-->
+      <div class="spinner-container" id="repeating-spinner-container"></div> <!--Repeating Spinner-->
+      <div class="spinner-container" id="interactive-spinner-container"></div> <!--Interactive Spinner-->
+    </div>
+
+    <!-- HTML Section-->
+    <div class="code-section">
+      <h3>HTML</h3>
+      <pre class="html" id="spinner-html"></pre>
+    </div>
+
+    <!-- CSS Section -->
+    <div class="code-section">
+      <h3>CSS</h3>
+      <pre class="css" id="spinner-css"></pre>
+    </div>
+      
+
+    <!-- JS Section -->
+    <div class="code-section">
+      <h3>JS</h3>
+      <pre class="js" id="spinner-js"></pre>
+    </div>
+  </div>
+
+    <script src="components/spinners.js"></script>
+    <script src="components/img.js"></script>
+    <script src="components/fab.js"></script>
+    <script src="components/Navbar.js"></script>
+    <script src="components/NavDrawer.js"></script>
+    <script src="components/Button.js"></script>
+  </body>
+</html>

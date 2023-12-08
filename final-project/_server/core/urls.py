@@ -7,7 +7,7 @@ urlpatterns = [
     path('hireme/', view=views.hireme, name="hireme"),
     path('projects/', view=views.projects, name="projects"),
     path('status/', view=views.status, name="status"),
-    path('projects/Quotes/', view=views.project1, name="project1"),
-    path('projects/CompLib/', view=views.project2, name="project2"),
-    path('projects/Recipe/', view=views.project3, name="project3"),
+    path('projects/Quotes/', view=views.quotes, name="quotes"),
+    path('projects/CompLib/', view=views.compLib, name="compLib"),
+    path('projects/Recipe/', view=views.recipeCards, name="Recipe"),
 ]

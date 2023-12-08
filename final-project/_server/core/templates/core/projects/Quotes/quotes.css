@@ -1,0 +1,99 @@
+@media screen and (min-width: 800px) { 
+    .login-form { 
+        width: 500px; 
+    } 
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #b469bc;
+    color: black;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+p.error-message {
+    position: absolute;
+    bottom: -32px;
+    color: red;
+    font-size: 0.8em;
+}
+
+label {
+    display: none; /* Hide label visually, but keep it for accessibility */
+}
+
+#searchInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #777;
+}
+
+#searchInput::placeholder {
+    color: #ccc;
+}
+
+#searchInput:not(:placeholder-shown) {
+    color: black;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.497);
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+#randomQuoteSection {
+    margin-top: 20px;
+}
+
+#randomQuote {
+    font-family: fantasy;
+    font-size: 1.2em;
+}
+
+.quote-box {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.quote {
+    margin: 0;
+}
+
+#searchResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
