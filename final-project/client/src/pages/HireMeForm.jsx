@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Forms.css';
+import cookie from "cookie";
+
 
 const HireMeForm = () => {
   const [projectName, setProjectName] = useState('');
@@ -9,8 +11,17 @@ const HireMeForm = () => {
   const [specificComponents, setSpecificComponents] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  async function getUser(){
+    const res = await fetch('/me/', {
+        credentials: "same-origin",
+    });
+    const body = await res.json();
+    setUser(body.user)
+  }
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+
 
     // Check for required fields
     if (!projectName || !projectDescription || !dateNeededBy) {
@@ -18,9 +29,24 @@ const HireMeForm = () => {
       return;
     }
 
-    // Make a POST request to your Django API endpoint with the form data
-    // Update state or show a success message as needed
-
+    const res = await fetch('/form/', {
+        method: "post",
+        credentials: "same-origin",
+        body: JSON.stringify({
+            projectName,
+            projectDescription,
+            dateNeededBy,
+            styleColorPreferences,
+            specificComponents,
+        }),
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": cookie.parse(document.cookie).csrftoken
+        }
+    })
+  
+      // Display success message
+    displayErrorMessage('Form submitted successfully!');
     // Clear form fields
     setProjectName('');
     setProjectDescription('');
@@ -28,8 +54,7 @@ const HireMeForm = () => {
     setStyleColorPreferences('');
     setSpecificComponents('');
 
-    // Display success message
-    displayErrorMessage('Form submitted successfully!');
+  
   };
 
   const displayErrorMessage = (message) => {

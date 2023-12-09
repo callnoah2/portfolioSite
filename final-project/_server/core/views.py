@@ -1,10 +1,12 @@
 # Load manifest when the server launches
 from django.shortcuts import render
 from django.conf import settings
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 import json
 import os
 from django.contrib.auth.decorators import login_required
+from django.forms.models import model_to_dict
+from .models import Form
 
 # Load manifest when the server launches
 MANIFEST = {}
@@ -96,3 +98,22 @@ def status(req):
         "css_file": "" if settings.DEBUG else MANIFEST["src/pages/Status.jsx"]["css"][0]
     }
     return render(req, "core/status.html", context)
+
+@login_required
+def me(req):
+    return JsonResponse({"user": model_to_dict(req.user)})
+
+@login_required
+def create_form(req):
+    body = json.loads(req.body)
+    form = Form(
+        projName = body["projectName"],
+        projDescription = body["projectDescription"],
+        projDate = body["dateNeededBy"],
+        projStyle = body["styleColorPreferences"],
+        projComponents = body["specificComponents"],
+        user = req.user,
+    )
+
+    form.save()
+    return JsonResponse({"form": model_to_dict(form)})
