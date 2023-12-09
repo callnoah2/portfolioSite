@@ -1,0 +1,33 @@
+.form-container {
+    background-color: #afbbff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Text input styles */
+  .form-input {
+    width: 90%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  /* Label styles */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Button styles */
+  .form-button {
+    background-color: #041367;
+    color: white;
+    padding: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 95%;
+  }
+  

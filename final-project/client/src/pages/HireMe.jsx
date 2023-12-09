@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Drawer from './Drawer';
-import '../styles/DarkLight.css'
-import '../index.css'
+import HireMeForm from './HireMeForm';
+import '../styles/DarkLight.css';
+import '../index.css';
 
 const HireMe = () => {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -26,9 +27,17 @@ const HireMe = () => {
       <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} darkModeToggle={toggleDarkMode} />
 
       <div className="content">
-        <h1>Welcome to My HireMe Page</h1>
-        <p>This is Hire Me Content</p>
-        {/* Add more content as needed */}
+        <h1>Hire Me!</h1>
+        <h3>Please fill out this form to start a quote.</h3>
+        <p>* Indicates a required field</p>
+        <HireMeForm />
+        <p>
+          Please Check the{' '}
+          <a href="/status" style={{ color: '#041367', textDecoration: 'underline' }}>
+            Status Page
+          </a>{' '}
+          to review your form.
+        </p>
       </div>
     </div>
   );

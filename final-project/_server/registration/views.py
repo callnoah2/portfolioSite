@@ -2,8 +2,22 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.http import JsonResponse
+from .forms import ProjectForm
 
 # Create your views here.
+def hire_me(request):
+    if request.method == "POST":
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            project = form.save(commit=False)
+            project.user = request.user
+            project.save()
+            return redirect("/")
+    else:
+        form = ProjectForm()
+
+    return render(request, "hire_me/hire_me.html", {"form": form})
+
 def sign_up(req):
     if req.method == "POST":
         user = User.objects.create_user(
