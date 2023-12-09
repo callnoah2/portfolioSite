@@ -26,19 +26,19 @@ const Projects = () => {
     {
       title: 'Quote Search',
       description: 'This web app is a mobile-first app that allows users to search for quotes and pin them.',
-      path: '/projects/Quotes/',
+      path: '/quotes/',
       imagePath: '../images/Assn6',
     },
     {
       title: 'Component Library',
       description: 'This web app is a library for other developers to quickly find and implement different web components.',
-      path: '/projects/CompLib/',
+      path: '/compLib/',
       imagePath: '../images/Assn5',
     },
     {
       title: 'Recipe Cards',
       description: 'This web app allows users to enter recipies and get a print-friendly, formatted recipe card.',
-      path: '/projects/Recipe/',
+      path: '/recipe/',
       imagePath: '../images/Assn4',
     },
   ];
