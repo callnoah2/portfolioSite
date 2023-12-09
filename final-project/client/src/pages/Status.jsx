@@ -76,7 +76,7 @@ const Status = () => {
           </div>
         )}
 
-        {!userData.submittedForm && <p>No submitted form found. <a href="/hire-me">Submit a form</a></p>}
+        {!userData.submittedForm && <p>No submitted form found. <a href="/hireme">Submit a form</a></p>}
       </div>
     </div>
   );
