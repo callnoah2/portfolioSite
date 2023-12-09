@@ -2,6 +2,8 @@
 
 {% block content %}
 <form action="/registration/sign_in/" method="post">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'templates/registration/registration.css' %}" defer>
   {% csrf_token %}
   <div>
     <label>

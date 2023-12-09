@@ -33,7 +33,6 @@ const HireMeForm = () => {
   };
 
   const displayErrorMessage = (message) => {
-    errorMessage.style.color ='white'
     setErrorMessage(message);
   };
 
