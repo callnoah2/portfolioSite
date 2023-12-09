@@ -8,6 +8,7 @@ const Quotes = () => {
   const [pinnedQuotes, setPinnedQuotes] = useState([]);
   const [unpinnedResults, setUnpinnedResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
+  const searchButton = document.querySelector('button[type="submit"]');
 
   useEffect(() => {
     // Retrieve pinned quotes from localStorage
