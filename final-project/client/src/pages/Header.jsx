@@ -33,7 +33,7 @@ const Header = ({ isDrawerOpen, toggleDrawer }) => {
       )}
       <span className="example-title">Noah Call Portfolio</span>
       {/* Add the Logout button */}
-      <Link to="registration/logout" className="logout-button">
+      <Link to="../registration/logout" className="logout-button">
         Logout
       </Link>
     </div>
