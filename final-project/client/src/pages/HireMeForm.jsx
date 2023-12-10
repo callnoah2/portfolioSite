@@ -73,10 +73,10 @@ const HireMeForm = () => {
 
         <label className="form-label" htmlFor="styleColorPreferences">Style/Color Preferences:</label>
         <input className="form-input" type="text" id="styleColorPreferences" value={styleColorPreferences} onChange={(e) => setStyleColorPreferences(e.target.value)} />
-
-        <label className="form-label" htmlFor="specificComponents">Specific Components:</label>
-        <textarea className="form-input" id="specificComponents" value={specificComponents} onChange={(e) => setSpecificComponents(e.target.value)} />
-
+        <div>
+          <label className="form-label" htmlFor="specificComponents">Specific Components:</label>
+          <textarea className="form-input" id="specificComponents" value={specificComponents} onChange={(e) => setSpecificComponents(e.target.value)} />
+        </div>
         <button className="form-button" type="submit">Submit</button>
       </form>
     </div>
