@@ -95,12 +95,12 @@ const Status = () => {
                   <div>
                     {forms.map(form => (
                       <div className="form-container" key={form.id}>
-                        <h2>Title: {form.projName}</h2>
-                        <p>Description: {form.projDescription}</p>
-                        <p>Date Needed: {form.projDate}</p>
-                        <p>Project style: {form.projStyle}</p>
-                        <p>Special Components: {form.projComponents}</p>
-                        <p>Status of {form.projName}: {form.status}</p>
+                        <h2>Title: {form.projName || 'N/A'}</h2>
+                        <p>Description: {form.projDescription || 'N/A'}</p>
+                        <p>Date Needed: {form.projDate || 'N/A'}</p>
+                        <p>Project style: {form.projStyle || 'N/A'}</p>
+                        <p>Special Components: {form.projComponents || 'N/A'}</p>
+                        <p>Status of {form.projName}: {form.projStatus || 'N/A'}</p>
                       </div>
                     ))}
                   </div>
