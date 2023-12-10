@@ -29,5 +29,6 @@
     border-radius: 5px;
     cursor: pointer;
     width: 95%;
+    max-width: 50%;
   }
   

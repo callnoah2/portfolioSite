@@ -10,14 +10,6 @@ const HireMeForm = () => {
   const [styleColorPreferences, setStyleColorPreferences] = useState('');
   const [specificComponents, setSpecificComponents] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
-  async function getUser(){
-    const res = await fetch('/me/', {
-        credentials: "same-origin",
-    });
-    const body = await res.json();
-    setUser(body.user)
-  }
   
   const handleSubmit = async (e) => {
     e.preventDefault();

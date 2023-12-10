@@ -104,16 +104,22 @@ def me(req):
     return JsonResponse({"user": model_to_dict(req.user)})
 
 @login_required
-def create_form(req):
-    body = json.loads(req.body)
-    form = Form(
-        projName = body["projectName"],
-        projDescription = body["projectDescription"],
-        projDate = body["dateNeededBy"],
-        projStyle = body["styleColorPreferences"],
-        projComponents = body["specificComponents"],
-        user = req.user,
-    )
+def forms(req):
+    if req.method == "POST":
+        body = json.loads(req.body)
+        form = Form(
+            projName = body["projectName"],
+            projDescription = body["projectDescription"],
+            projDate = body["dateNeededBy"],
+            projStyle = body["styleColorPreferences"],
+            projComponents = body["specificComponents"],
+            user = req.user,
+        )
 
-    form.save()
-    return JsonResponse({"form": model_to_dict(form)})
+        form.save()
+        return JsonResponse({"form": model_to_dict(form)})
+    else:
+        forms = [model_to_dict(form) for form in req.user.form_set.all()]
+        return JsonResponse({"forms": forms})
+
+

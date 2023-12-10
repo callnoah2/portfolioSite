@@ -10,5 +10,6 @@ urlpatterns = [
     path('quotes/', view=views.quotes, name="quotes"),
     path('compLib/', view=views.compLib, name="compLib"),
     path('recipe/', view=views.recipeCards, name="Recipe"),
-    path('form/', view=views.create_form, name = "create form")
+    path('form/', view=views.forms, name = "forms"),
+    path('me/', view=views.me, name="me"),
 ]
