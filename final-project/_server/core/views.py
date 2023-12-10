@@ -14,7 +14,7 @@ if not settings.DEBUG:
     f = open(f"{settings.BASE_DIR}/_server/core/static/core/manifest.json")
     MANIFEST = json.load(f)
 
-
+@login_required
 def index(req):
     context = {
         "asset_url": os.environ.get("ASSET_URL", ""),
@@ -25,7 +25,7 @@ def index(req):
     }
     return render(req, "core/index.html", context)
 
-
+@login_required
 def about(req):
     context = {
         "asset_url": os.environ.get("ASSET_URL", ""),
@@ -47,7 +47,7 @@ def hireme(req):
     }
     return render(req, "core/hire-me.html", context)
 
-
+@login_required
 def projects(req):
     context = {
         "asset_url": os.environ.get("ASSET_URL", ""),
@@ -58,6 +58,7 @@ def projects(req):
     }
     return render(req, "core/projects.html", context)
 
+@login_required
 def quotes(req):
     context = {
         "asset_url": os.environ.get("ASSET_URL", ""),
@@ -68,6 +69,7 @@ def quotes(req):
     }
     return render(req, "core/quotes.html", context)
 
+@login_required
 def compLib(req):
     context = {
         "asset_url": os.environ.get("ASSET_URL", ""),
@@ -78,6 +80,7 @@ def compLib(req):
     }
     return render(req, "core/compLib.html", context)
 
+@login_required
 def recipeCards(req):
     context = {
         "asset_url": os.environ.get("ASSET_URL", ""),
