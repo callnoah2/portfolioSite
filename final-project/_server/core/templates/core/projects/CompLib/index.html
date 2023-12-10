@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpinUp Library</title>
-    <link rel="stylesheet" href="Styles.css" defer>
-    <link rel="stylesheet" href="components/Navbar.css" defer>
-    <link rel="stylesheet" href="components/NavDrawer.css" defer>
-    <link rel="stylesheet" href="components/Button.css" defer>
-    <link rel="stylesheet" href="components/fab.css" defer>
-    <link rel="stylesheet" href="components/img.css" defer>
-    <link rel="stylesheet" href="components/spinners.css" defer>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" defer>
+    <link rel="stylesheet" href="{% static '/components/Navbar.css' %}" defer>
+    <link rel="stylesheet" href="{% static '/components/NavDrawer.css' %}" defer>
+    <link rel="stylesheet" href="c{% static '/omponents/Button.css' %}" defer>
+    <link rel="stylesheet" href="{% static '/components/fab.css' %}" defer>
+    <link rel="stylesheet" href="{% static '/components/img.css' %}" defer>
+    <link rel="stylesheet" href="{% static '/components/spinners.css' %}" defer>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" defer>
   </head>
   <body>
@@ -245,11 +246,11 @@
     </div>
   </div>
 
-    <script src="components/spinners.js"></script>
-    <script src="components/img.js"></script>
-    <script src="components/fab.js"></script>
-    <script src="components/Navbar.js"></script>
-    <script src="components/NavDrawer.js"></script>
-    <script src="components/Button.js"></script>
+    <script src="{% static '/components/spinners.js' %}"></script>
+    <script src="{% static '/components/img.js' %}"></script>
+    <script src="{% static '/components/fab.js' %}"></script>
+    <script src="{% static '/components/Navbar.js' %}"></script>
+    <script src="{% static '/components/NavDrawer.js' %}"></script>
+    <script src="{% static '/components/Button.js' %}"></script>
   </body>
 </html>

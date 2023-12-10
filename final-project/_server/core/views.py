@@ -60,36 +60,15 @@ def projects(req):
 
 @login_required
 def quotes(req):
-    context = {
-        "asset_url": os.environ.get("ASSET_URL", ""),
-        "debug": settings.DEBUG,
-        "manifest": MANIFEST,
-        "js_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Quotes/quotes.jsx"]["file"],
-        "css_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Quotes/quotes.jsx"]["css"][0]
-    }
-    return render(req, "core/quotes.html", context)
+    return render(req, "core/projects/quotes/quotes.html")
 
 @login_required
 def compLib(req):
-    context = {
-        "asset_url": os.environ.get("ASSET_URL", ""),
-        "debug": settings.DEBUG,
-        "manifest": MANIFEST,
-        "js_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/CompLib/compLib.jsx"]["file"],
-        "css_file": "" if settings.DEBUG else MANIFEST["src/pages/CompLib/projects/compLib.jsx"]["css"][0]
-    }
-    return render(req, "core/compLib.html", context)
+    return render(req, "core/projects/CompLib/index.html")
 
 @login_required
 def recipeCards(req):
-    context = {
-        "asset_url": os.environ.get("ASSET_URL", ""),
-        "debug": settings.DEBUG,
-        "manifest": MANIFEST,
-        "js_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Recipe/recipe.jsx"]["file"],
-        "css_file": "" if settings.DEBUG else MANIFEST["src/pages/projects/Recipe/recipe.jsx"]["css"][0]
-    }
-    return render(req, "core/recipe.html", context)
+    return render(req, "core/projects/Recipe/index.html")
 
 @login_required
 def status(req):

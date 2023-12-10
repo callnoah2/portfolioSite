@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% load static %}
+        <base href="/" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quotable Quotes</title>
-        <link rel="stylesheet" href="quotes.css" defer>
+        <link rel="stylesheet" href="{% static 'quotes.css' %}" defer>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
     </head>
     <body>
@@ -29,6 +31,6 @@
             </div>
         </div>
 
-        <script src="quotes.js"></script>
+        <script src="{% static 'quotes.css' %}"></script>
     </body>
 </html>
