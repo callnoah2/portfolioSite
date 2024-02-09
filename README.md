@@ -1,17 +1,31 @@
 # Personal Portfolio / Final Project
 
-This project serves as a personal portfolio
+Welcome to my personal portfolio project! This showcase utilizes a combination of modern technologies to present a comprehensive overview of my skills and projects.
+
+## Technologies Used
+
+- Poetry: Efficient dependency management for Python projects.
+- Vite: A fast and modern frontend build tool that enhances the development experience.
+- React: A powerful JavaScript library for building user interfaces.
+- Django: A high-level Python web framework for the backend.
+- SQL: Structured Query Language for managing the database.
+- User Authentication: Secure user authentication for a personalized experience.
 
 ## Requirements
 
-poetry, npm
+- Make sure you have the following installed:
 
-## To run
+- Poetry: Handles Python dependencies.
+- npm: Manages JavaScript dependencies.
 
-***Read /final-project/README*** for steps of how to run project.
+## Getting Started
 
-## What I would/might change
+Refer to the /final-project/README for detailed instructions on setting up and running the project.
 
-- forward forms to my email
-- make the page more 'hire me' based
-- make the projects page more interesting/dynamic
+## Future Improvements
+
+While the current version serves as a personal portfolio, there are plans to enhance its functionality in the future:
+
+Forwarding forms to my email for easy communication.
+Refining the page to have a more 'hire me' focus.
+Making the projects page more visually engaging and dynamic.
